@@ -29,7 +29,7 @@ resource "aws_security_group" "httpd-sg" {
     to_port = 80  
   }
 
-  egress = {
+  egress {
     cidr_blocks = ["0.0.0.0/0"]
     description = "test"
     from_port = 0
