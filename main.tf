@@ -9,7 +9,7 @@ provider "aws" {
 }
 
 resource "aws_security_group" "httpd-sg" {
-  name = "httpd-access"
+  name = "httpd-sg"
   vpc_id = "vpc-61a8630a"
 
   ingress {
