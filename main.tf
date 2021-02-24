@@ -60,7 +60,7 @@ resource "aws_instance" "test" {
 
   }
   provisioner "local-exec" {
-    command = "ansible-playbook -i ${aws_instance.test.public_ip}, --private-key ${local.private_key_path} httpd.yml"
+    command = "ansible-playbook -i ${aws_instance.test.public_ip}, --private-key ${local.private_key_path} /etc/anisble/httpd.yml"
   }
 
 }
