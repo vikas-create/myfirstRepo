@@ -42,7 +42,7 @@ resource "aws_security_group" "httpd-sg" {
 resource "aws_instance" "test" {
   ami           = "ami-09246ddb00c7c4fef"
   instance_type = "t2.micro"
-  security_groups = [aws_security_group.httpd-sg.id]
+  security_groups = [aws_security_group.httpd-sg.name]
   key_name      = local.key_name
   tags = {
     "Name" = "tf-instance"
