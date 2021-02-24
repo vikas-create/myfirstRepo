@@ -60,7 +60,7 @@ resource "aws_instance" "test" {
 
   }
   provisioner "local-exec" {
-    command = "ssh-copy-id -i /root/.ssh/id_rsa.pub ec2-user@${aws_instance.test.public_ip}"
+    command = "ssh-copy-id -i /home/ec2-user/.ssh/id_rsa.pub ec2-user@${aws_instance.test.public_ip}"
   }
   provisioner "local-exec" {
     command = "ansible-playbook -i ${aws_instance.test.public_ip}, --private-key ${local.private_key_path} /etc/ansible/httpd.yml"
