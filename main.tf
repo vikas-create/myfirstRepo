@@ -61,6 +61,8 @@ resource "aws_instance" "test" {
   }
   provisioner "local-exec" {
     command = "ssh-copy-id ${aws_instance.test.public_ip}"
+  }
+  provisioner "local-exec" {
     command = "ansible-playbook -i ${aws_instance.test.public_ip}, --private-key ${local.private_key_path} /etc/ansible/httpd.yml"
   }
 
