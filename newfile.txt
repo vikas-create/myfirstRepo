@@ -1,3 +1,6 @@
 This is new file.
 Addng a new line.
 This is new line added bu another person.
+Adding a new feature.
+Color: Red
+Name: Dev 1
